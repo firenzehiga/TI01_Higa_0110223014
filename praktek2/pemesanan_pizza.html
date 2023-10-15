@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+	<title>Firenze Higa | Pemesanan Pizza</title>
+</head>
+<body style="font-family: Poppins, sans-serif; margin: 1; padding: 0; margin-left: 4%;">
+	<h1>Black Goose Bistro | Pizza On-Demand</h1>
+	<p>Our 12" wood-fired pizzas are available for delivery. Build your custom pizza and we'll deliver it within an
+		hour.
+	</p>
+	<form action="http://blackgoosebistro.com/pizza.php" method="POST">
+		<fieldset style="background-image: url('https://drive.google.com/uc?export=view&id=1HifC7-LXGxiJR-AzOrXADc60oS2pBTOc');">
+			<legend><strong>Your Information</strong></legend>
+			<table>
+				<tr>
+					<td style="display: inline-block; width: 169px;">Name :</td>
+					<td>
+						<input type="text" name="customername" id="name" placeholder="Your Name"
+							style="width: 249px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
+					</td>
+				</tr>
+				<tr>
+					<td style="display: inline-block; width: 170px;">Adress :</td>
+					<td>
+						<input type="text" name="address" id="address" placeholder="Your Address"
+							style="width: 250px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
+					</td>
+				</tr>
+				<tr>
+					<td style="display: inline-block; width: 170px;">Telephone Number:</td>
+					<td>
+						<input type="text" name="telephone" id="telephone" placeholder="Your Phone Number"
+							style="width: 250px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
+					</td>
+				</tr>
+				<tr>
+					<td style="display: inline-block; width: 170px;">Email:</td>
+					<td>
+						<input type="email" name="email" id="email" placeholder="Your Email"
+							style="width: 250px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
+					</td>
+				</tr>
+				<tr>
+					<td style="display: inline-block; width: 170px;">Delivery Instruction:</td>
+					<td>
+						<textarea name="instructions" id="instructions" cols="30" rows="10" placeholder="Delivery Instruction"
+							style="width: 250px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required></textarea>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset style="margin-top: 2%; background-image: url('https://drive.google.com/uc?export=view&id=1HifC7-LXGxiJR-AzOrXADc60oS2pBTOc');">
+			<legend><strong>Design Your Pizza</strong></legend>
+			<span style="display: block;">Pizza Spec</span>
+
+			<ul style="list-style-type:none;">
+				<span>Crust (Choose one) : </span>
+				<li><input type="radio" name="crust" value="Classic White">
+					<label for="">Classic White</label>
+				</li>
+				<li><input type="radio" name="crust" value="Multigrain">
+					<label for="">Multigrain</label>
+				</li>
+				<li><input type="radio" name="crust" value="Cheese-stuffed crust">
+					<label for="">Cheese-stuffed crust</label>
+				</li>
+				<li><input type="radio" name="crust" value="Glutten Free">
+					<label for="">Glutten Free</label>
+				</li><br>
+
+				<span style="margin-right: 10%;">Toppings (Choose as many as you want) : </span>
+				<li>
+					<input type="checkbox" name="toppings[]" value="Red Sauce" checked>
+					<label for="">Red Sauce</label>
+				</li>
+				<li>
+					<input type="checkbox" name="toppings[]" value="White Sauce">
+					<label for="">White Sauce</label>
+				</li>
+				<li>
+					<input type="checkbox" name="toppings[]" value="Mozarella Cheese">
+					<label for="">Mozarella Cheese</label>
+				</li>
+				<li>
+					<input type="checkbox" name="toppings[]" value="Pepperoni">
+					<label for="">Pepperoni</label>
+				</li>
+				<li>
+					<input type="checkbox" name="toppings[]" value="Mushrooms">
+					<label for="">Mushrooms</label>
+				</li>
+				<li>
+					<input type="checkbox" name="toppings[]" value="Peppers">
+					<label for="">Peppers</label>
+				</li>
+				<li>
+					<input type="checkbox" name="toppings[]" value="Anchoives">
+					<label for="">Anchoives</label>
+				</li><br>
+				<span>Number/Quantity :</span>
+				<li>
+					<label for="">How Many Pizzas :</label>
+					<input type="number" name="pizzas" id="pizzas" max="6" min="1" style="width: 30px;" value="1">
+				</li><br>
+				<button type="submit" style="padding: 7px 10px; border-radius: 2px;">Bring me a Pizza</button>
+				<button type="reset" style="padding: 7px 10px; border-radius: 2px;">Reset</button>
+			</ul>
+
+
+		</fieldset>
+	</form>
+
+
+</body>
+
+</html>
