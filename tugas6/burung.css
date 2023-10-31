@@ -1,0 +1,78 @@
+#header{
+    background-color: #E5B26D ;
+    padding: 10px 10px;
+    font-family: verdana;
+}
+
+#header h1{
+    
+    text-align: center;
+    color: blue;
+}
+
+body{
+    background-color: #FAF1E0 ;
+    font-family: "Trebuchet MS";
+}
+
+blockquote{
+    background-color: #F8D32C;
+    border: 1px dotted black;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Trebuchet MS";
+    
+}
+
+ul, li{
+    display: inline;
+    
+}
+.list{
+    padding: 20px 20px;
+    margin-left: 40%;
+    font-size: 18px ;
+}
+.gambar{
+    margin-left:28%;
+
+}
+
+.burung{
+    font-size: 50px;
+    color: blue;
+}
+
+.koleksi{
+    margin-left: 11%;
+    display: inline-block;
+}
+
+.koleksi img{
+    border-radius: 25%;
+    margin: 5px 5px;
+}
+
+p{
+    font-weight: 600;
+}
+
+#profil{
+    font-weight: 600;
+}
+
+.promo{
+    font-family: verdana;
+    text-align: center;
+}
+
+.link a{
+    text-decoration: none;
+    color: blue ;
+
+}
+
+.link a:hover{
+    color: green;
+
+}
