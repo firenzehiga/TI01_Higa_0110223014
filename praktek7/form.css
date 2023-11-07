@@ -1,0 +1,93 @@
+body{
+    font-family: arial, helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color: black;
+    padding: 20px 100px;
+}
+
+.navbar a{
+    color: #ccc;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    border-left: 1px solid #fff;
+}
+
+a:hover{
+    color: cornflowerblue;
+}
+
+.text-title{
+    font-size: 20px !important;
+    border-left: 0 !important;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+table {
+    margin: 20px auto;
+}
+
+input, select{
+    height: 30px;
+}
+
+input, select, textarea{
+    border: 1px solid #ccc ;
+    border-radius: 4px;
+}
+
+td{
+    padding: 5px 10px;
+}
+
+label {
+    display: block;
+    text-align: end;
+    font-size: 15px;
+
+}
+
+
+input {
+    width: 350px;
+}
+
+#nik {
+    width:150px;
+}
+
+#telepon {
+    width:237px;
+}
+
+#tanggalLahir {
+    width:237px;
+}
+
+#status {
+    width: 137px;
+}
+
+button {
+    padding: 6px 10px;
+    border: 0;
+    border-radius: 4px ;
+    color: white;
+}
+
+.btn-blue {
+    background-color: cornflowerblue;
+}
+
+.btn-red {
+    background-color: crimson;
+}
