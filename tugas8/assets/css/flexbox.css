@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+nav{
+    background-color: #F1A2C5;
+    flex:1;
+}   
+
+header{
+    background-color: #FADF8D;
+    height: 12vh;
+}
+
+.row{
+    flex: 5;
+
+}
+.content{
+    display: flex;
+    height: 70vh;
+
+}
+
+article{
+    background-color: #FFFAEB ;
+    flex: 1;
+}
+
+aside{
+    background-color: aquamarine;
+    flex: 0 0 30vw;
+}
+
+footer{
+    background-color: #FADF8D;
+    height: 12vh;
+}
+
+nav, header, article, aside, footer{
+    padding: 19px 0 0 10px;
+}
