@@ -32,11 +32,13 @@ header{
 article{
     background-color: #FFFAEB ;
     flex: 1;
+    order: 1;
 }
 
 aside{
     background-color: aquamarine;
     flex: 0 0 30vw;
+    order: 2;
 }
 
 footer{
