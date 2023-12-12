@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Jumlah</title>
+</head>
+<body>
+    <h1>Menghitung Jumlah 2 Bilangan</h1>
+    <div style="margin-top: 2%; margin-left: 2%;">
+        <label for="">Bilangan 1 :</label>
+        <input type="number" id="bil1">
+    </div>
+    <span style="margin-left: 10%;">+</span>
+    <div style=" margin-left: 2%;">
+        <label for="">Bilangan 2 : </label>
+        <input type="number" id="bil2" onchange="hitungJumlah()">
+    </div>
+    <hr>
+    <div style="margin-left: 4%;">
+        <p>Hasil = <span id="hasilJumlah">0</span></p>    
+    </div>
+
+<script>
+function hitungJumlah(){
+    let bil1 = document.getElementById("bil1").value|0
+    let bil2 = document.getElementById("bil2").value|0
+
+    // dapatkan elemen untuk menampilkan hasil
+    let hasilJumlah = document.querySelector("#hasilJumlah")
+
+    let jumlah = bil1 + bil2;
+
+    console.log(jumlah);
+    hasilJumlah.innerHTML = jumlah
+}
+</script>
+        
+</body>
+</html>

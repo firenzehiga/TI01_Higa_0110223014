@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenghitungKurs Dollar</title>
+</head>
+<body>
+<h1>Menghitung Kurs Dollar</h1>
+<label for="rupiahInput">Masukkan jumlah uang dalam rupiah:</label>
+<input style="padding: 5px ;" type="number" id="jumlahRupiah" onchange="hitungNilaiDollar()">
+
+
+<hr>
+
+<p><span id="hasilDollar">0</span></p>
+
+<script>
+    // Fungsi untuk menghitung nilai dollar berdasarkan jumlah uang dalam rupiah
+    function hitungNilaiDollar() {
+        
+        const jumlahRupiah = parseFloat(document.getElementById('jumlahRupiah').value);
+
+        const kursDollar = 14650;
+        const Dollar = jumlahRupiah / kursDollar;
+
+        // Menampilkan hasil di elemen dengan id 'hasil'
+        let hasilDollar = document.getElementById('hasilDollar')
+
+        hasilDollar.innerHTML = `Rp.${jumlahRupiah} Setara dengan $${Dollar.toFixed(2)}`;
+    }
+</script>
+
+</body>
+</html>
