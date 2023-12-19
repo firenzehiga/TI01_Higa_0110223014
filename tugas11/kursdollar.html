@@ -13,21 +13,20 @@
 
 <hr>
 
-<p><span id="hasilDollar">0</span></p>
+<p><span id="hasilDollar">Rp.</span></p>
 
 <script>
     // Fungsi untuk menghitung nilai dollar berdasarkan jumlah uang dalam rupiah
     function hitungNilaiDollar() {
         
-        const jumlahRupiah = parseFloat(document.getElementById('jumlahRupiah').value);
+        let jumlahRupiah = parseFloat(document.getElementById('jumlahRupiah').value);
 
-        const kursDollar = 14650;
-        const Dollar = jumlahRupiah / kursDollar;
+        let kursDollar = 14650;
+        let Dollar = jumlahRupiah / kursDollar;
 
-        // Menampilkan hasil di elemen dengan id 'hasil'
         let hasilDollar = document.getElementById('hasilDollar')
 
-        hasilDollar.innerHTML = `Rp.${jumlahRupiah} Setara dengan $${Dollar.toFixed(2)}`;
+        hasilDollar.innerHTML = `Rp.${jumlahRupiah} setara dengan $${Dollar.toFixed(2)}`;
     }
 </script>
 

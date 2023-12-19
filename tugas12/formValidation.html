@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulir Pemesanan Tiket</h2>
+    <form id="bookingForm">
+        <table>
+            <tr>
+                <td><label for="nama">Nama Pelanggan:</label></td>
+                <td><input type="text" id="nama"></td>
+                <td><span id="namaError" class="error"></span></td>
+            </tr>
+        <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" id="email"></td>
+            <td><span id="emailError" class="error"></span></td>
+        </tr>        
+        <tr>
+            <td><label for="jam">Jam Keberangkatan:</label></td>
+            <td><input type="text" id="jam"></td>
+            <td><span id="jamError" class="error"></span></td>
+        </tr>
+        <tr>
+            <td><label for="tujuan">Tujuan Keberangkatan:</label></td>
+            <td><input type="text" id="tujuan"></td>
+            <td><span id="tujuanError" class="error"></span></td>
+        </tr>
+        <tr>
+            <td><label for="jumlah">Jumlah Tiket:</label></td>
+            <td><input type="number" id="jumlah"></td>
+            <td><span id="jumlahError" class="error"></span></td>
+        </tr>
+    </table>
+
+        <button type="button" onclick="validateForm()" style="padding: 5px; margin-left: 3%; margin-top: 1%;">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function validateForm() {
+
+            // Untuk menghilangkan pesan error setelah validasi sudah diperbaiki
+            clearErrors();
+
+            const nama = document.getElementById('nama').value;
+            const email = document.getElementById('email').value;
+            const jam = document.getElementById('jam').value;
+            const tujuan = document.getElementById('tujuan').value;
+            const jumlah = document.getElementById('jumlah').value;
+
+            // Validasi Nama Pelanggan
+            if (nama.length === 0 || nama.length > 30) {
+                displayError('nama', '*Nama Pelanggan harus diisi (maksimum 30 karakter)');
+                return;
+            }
+
+            // Validasi Email
+            if (email.length === 0) {
+                displayError('email', '*Email harus diisi');
+                return;
+            }
+
+            // Validasi Jam Keberangkatan
+            if (jam.length === 0) {
+                displayError('jam', '*Jam Keberangkatan harus diisi');
+                return;
+            }
+
+            // Validasi Tujuan Keberangkatan
+            if (tujuan.length === 0) {
+                displayError('tujuan', '*Tujuan Keberangkatan harus diisi');
+                return;
+            }
+
+            // Validasi Jumlah Tiket
+            if (jumlah.length === 0 || jumlah < 1 || jumlah > 10) {
+                displayError('jumlah', '*Jumlah Tiket harus di antara 1 - 10');
+                return;
+            }
+
+            // Jika semua valid, tampilkan hasil di bawah form
+            displayResultForm(nama, email, jam, tujuan, jumlah);
+        }
+
+        function displayError(field, message) {
+            document.getElementById(field + 'Error').innerHTML = message;
+            document.getElementById(field).style.borderColor = 'red';
+        }
+
+        function clearErrors() {
+            const fields = ['nama', 'email', 'jam', 'tujuan', 'jumlah'];
+            fields.forEach(function(field) {
+                document.getElementById(field + 'Error').innerHTML = '';
+                document.getElementById(field).style.borderColor = '';
+            });
+        }
+
+        function displayResultForm(nama, email, jam, tujuan, jumlah) {
+            let resultHTML = '<h2>Detail Pemesanan Tiket:</h2>';
+            resultHTML += '<p><strong>Nama Pelanggan:</strong> ' + nama + '</p>';
+            resultHTML += '<p><strong>Email:</strong> ' + email + '</p>';
+            resultHTML += '<p><strong>Jam Keberangkatan:</strong> ' + jam + '</p>';
+            resultHTML += '<p><strong>Tujuan Keberangkatan:</strong> ' + tujuan + '</p>';
+            resultHTML += '<p><strong>Jumlah Tiket:</strong> ' + jumlah + '</p>';
+
+            document.getElementById('result').innerHTML = resultHTML;
+        }
+    </script>
+
+</body>
+</html>
