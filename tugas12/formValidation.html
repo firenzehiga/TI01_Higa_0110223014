@@ -119,7 +119,7 @@
             }
 
             // Jika semua valid, tampilkan hasil di bawah form
-            displayResultForm(nama, email, jam, tujuan, jumlah);
+            displayResult(nama, email, jam, tujuan, jumlah);
         }
 
         function displayError(field, message) {
@@ -135,7 +135,7 @@
             });
         }
 
-        function displayResultForm(nama, email, jam, tujuan, jumlah) {
+        function displayResult(nama, email, jam, tujuan, jumlah) {
             let resultHTML = '<h2>Detail Pemesanan Tiket:</h2>';
             resultHTML += '<p><strong>Nama Pelanggan:</strong> ' + nama + '</p>';
             resultHTML += '<p><strong>Email:</strong> ' + email + '</p>';
