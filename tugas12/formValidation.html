@@ -9,44 +9,73 @@
         .error {
             color: red;
         }
+
+        .center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card {
+  /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 50%;
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        /* Add some padding inside the card container */
+        .container {
+        padding: 2px 16px;
+        align-items: center;
+    justify-content: center;
+
+    }
     </style>
 </head>
 <body>
-    <h2>Formulir Pemesanan Tiket</h2>
-    <form id="bookingForm">
-        <table>
-            <tr>
-                <td><label for="nama">Nama Pelanggan:</label></td>
-                <td><input type="text" id="nama"></td>
-                <td><span id="namaError" class="error"></span></td>
-            </tr>
-        <tr>
-            <td><label for="email">Email:</label></td>
-            <td><input type="email" id="email"></td>
-            <td><span id="emailError" class="error"></span></td>
-        </tr>        
-        <tr>
-            <td><label for="jam">Jam Keberangkatan:</label></td>
-            <td><input type="time" id="jam"></td>
-            <td><span id="jamError" class="error"></span></td>
-        </tr>
-        <tr>
-            <td><label for="tujuan">Tujuan Keberangkatan:</label></td>
-            <td><input type="text" id="tujuan"></td>
-            <td><span id="tujuanError" class="error"></span></td>
-        </tr>
-        <tr>
-            <td><label for="jumlah">Jumlah Tiket:</label></td>
-            <td><input type="number" id="jumlah"></td>
-            <td><span id="jumlahError" class="error"></span></td>
-        </tr>
-    </table>
+    <div class="center">
+        <div class="card">
+            <div class="container">
+                <h2>Formulir Pemesanan Tiket</h2>
+                <form id="bookingForm">
+                    <table>
+                        <tr>
+                            <td><label for="nama">Nama Pelanggan:</label></td>
+                            <td><input type="text" id="nama"></td>
+                            <td><span id="namaError" class="error"></span></td>
+                        </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" id="email"></td>
+                        <td><span id="emailError" class="error"></span></td>
+                    </tr>        
+                    <tr>
+                        <td><label for="jam">Jam Keberangkatan:</label></td>
+                        <td><input type="time" id="jam"></td>
+                        <td><span id="jamError" class="error"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tujuan">Tujuan Keberangkatan:</label></td>
+                        <td><input type="text" id="tujuan"></td>
+                        <td><span id="tujuanError" class="error"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="jumlah">Jumlah Tiket:</label></td>
+                        <td><input type="number" id="jumlah"></td>
+                        <td><span id="jumlahError" class="error"></span></td>
+                    </tr>
+                </table>
 
-        <button type="button" onclick="validateForm()" style="padding: 5px; margin-left: 3%; margin-top: 1%;">Submit</button>
-    </form>
-
-    <div id="result"></div>
-
+                    <button type="button" onclick="validateForm()" style="padding: 5px; margin-left: 3%; margin-top: 1%;">Submit</button>
+                </form>
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
     <script>
         function validateForm() {
 
@@ -90,7 +119,7 @@
             }
 
             // Jika semua valid, tampilkan hasil di bawah form
-            displayResultForm(nama, email, jam, tujuan, jumlah);
+            displayResult(nama, email, jam, tujuan, jumlah);
         }
 
         function displayError(field, message) {
@@ -106,7 +135,7 @@
             });
         }
 
-        function displayResultForm(nama, email, jam, tujuan, jumlah) {
+        function displayResult(nama, email, jam, tujuan, jumlah) {
             let resultHTML = '<h2>Detail Pemesanan Tiket:</h2>';
             resultHTML += '<p><strong>Nama Pelanggan:</strong> ' + nama + '</p>';
             resultHTML += '<p><strong>Email:</strong> ' + email + '</p>';
